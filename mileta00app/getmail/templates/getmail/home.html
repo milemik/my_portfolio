@@ -1,0 +1,11 @@
+<h1>HELLO TO GET MAIL</h1>
+{% if error %}
+<h3>{{ error }}</h3>
+{% endif %}
+
+<form action="{% url 'unos' %}" method="POST">
+    {% csrf_token %}
+    <p>UNESITE SAJT</p>
+    <input name='website' type="text" maxlength="100" required>
+    <input type="submit" value="OK">
+</form>
